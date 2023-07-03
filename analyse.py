@@ -26,9 +26,9 @@ def first_plot():
     sns.set()
     fig = plt.figure(figsize=(20,10)) 
     plt.plot(np.arange(len(df_r0)),df_r0['sum_cum_live_project'], label='Live Project R+0: '+str(int(df_r0['sum_cum_live_project'].iloc[-1]))+'€')
-    plt.plot(np.arange(len(df_r0)),df_r0['sum_cum_Laurent_Noel'], label='Laurent Noel R+1: '+str(df_r0['sum_cum_Laurent_Noel'].iloc[-1])+'€')
+    plt.plot(np.arange(len(df_r0)),df_r0['sum_cum_Laurent_Noel'], label='Laurent Noel R+0: '+str(df_r0['sum_cum_Laurent_Noel'].iloc[-1])+'€')
     # plot df_r1
-    plt.plot(np.arange(len(df_r1)),df_r1['sum_cum_live_project'], label='Live Project R+0: '+str(int(df_r1['sum_cum_live_project'].iloc[-1]))+'€')
+    plt.plot(np.arange(len(df_r1)),df_r1['sum_cum_live_project'], label='Live Project R+1: '+str(int(df_r1['sum_cum_live_project'].iloc[-1]))+'€')
     plt.plot(np.arange(len(df_r1)),df_r1['sum_cum_Laurent_Noel'], label='Laurent Noel R+1: '+str(df_r1['sum_cum_Laurent_Noel'].iloc[-1])+'€')
     #fill between
     plt.fill_between(np.arange(len(df_r0)), df_r0['sum_cum_live_project'], df_r0['sum_cum_Laurent_Noel'], color='blue', alpha=.1, label='diff = '+str(int(df_r0['sum_cum_Laurent_Noel'].iloc[-1]-df_r0['sum_cum_live_project'].iloc[-1]))+'€')
