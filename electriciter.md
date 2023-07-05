@@ -1,2 +1,0 @@
-# Hall d'entree
-
